@@ -1,28 +1,21 @@
-/* Global Styles*/
+/* CSS for body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Header Styles */
+/* CSS for header */
 header {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Text color */
-  padding: 20px; /* Add padding for spacing */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Align items evenly */
-  align-items: center; /* Center items vertically */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
-header h1 {
-  margin: 0; /* Remove default margin */
-  font-size: 24px; /* Larger font size */
-}
-
+/* CSS for navigation menu */
 nav ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -31,85 +24,27 @@ nav ul li {
   margin-right: 20px;
 }
 
-nav ul li:last-child {
-  margin-right: 0; /* Remove margin from the last item */
-}
-
+/* CSS for navigation links */
 nav ul li a {
-  color: #fff; /* White text color */
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  transition: color 0.3s ease;
 }
 
+/* CSS for navigation links on hover */
 nav ul li a:hover {
-  color: #007bff; /* Hover color */
+  color: #ccc;
 }
 
-/* Ensure links are visible by default */
-nav ul li a {
-  visibility: visible;
-}
-
+/* CSS for main content */
 main {
   padding: 20px;
 }
 
-/* Form Styles*/
-form {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-select, input[type="number"] {
-  width: 200px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 8px 20px;
-  background-color: #007bff;
+/* CSS for footer */
+footer {
+  background-color: #333;
   color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Car List Styles*/
-#carListContainer {
-  border: 1px solid #ccc;
   padding: 10px;
+  text-align: center;
 }
 
-#carList {
-  list-style-type: none;
-  padding: 0;
-}
-
-#carList li {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-}
-
-/* Media Queries*/
-@media (max-width: 768px) {
-  header {
-      font-size: 1.2em;
-  }
-
-  
-
-  select, input[type="number"] {
-      width: 100%;
-  }
-}
