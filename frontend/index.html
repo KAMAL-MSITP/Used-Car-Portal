@@ -54,7 +54,20 @@
     </header>
 
     <main>
-       
+
+        <section class="signup-login">
+            
+            <button id="toggle-form-btn">Sign Up / Login</button>
+            <form id="signup-login-form" class="hidden">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign Up / Login</button>
+            </form>
+        </section>
+
+
         <div id="filterContainer">
           <form id="filterForm">
             <label for="make">Make:</label>
@@ -202,6 +215,17 @@
     </main>
 
     <footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const toggleFormBtn = document.getElementById("toggle-form-btn");
+                const signupLoginForm = document.getElementById("signup-login-form");
+        
+                toggleFormBtn.addEventListener("click", function() {
+                    signupLoginForm.classList.toggle("hidden");
+                });
+            });
+        </script>
+        
         <p>&copy; 2024 Used Car Portal</p>
     </footer>
 
