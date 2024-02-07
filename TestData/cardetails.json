@@ -6,6 +6,7 @@
     "BuildYear": 2018,
     "Price": 20000,
     "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
     "Description": "Reliable Toyota Camry with low mileage. Great condition and perfect for city driving."
   },
   {
@@ -15,6 +16,7 @@
     "BuildYear": 2017,
     "Price": 18000,
     "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
     "Description": "Honda Accord in excellent condition. Smooth ride and spacious interior."
   },
   {
@@ -24,6 +26,7 @@
     "BuildYear": 2016,
     "Price": 16000,
     "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
     "Description": "Ford Fusion with moderate mileage. Well-maintained and fuel-efficient."
   },
   {
@@ -33,6 +36,7 @@
     "BuildYear": 2019,
     "Price": 22000,
     "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
     "Description": "Chevrolet Malibu in great shape. Sleek design and comfortable ride."
   },
   {
@@ -42,6 +46,7 @@
     "BuildYear": 2017,
     "Price": 19000,
     "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
     "Description": "Nissan Altima with low mileage. Reliable performance and spacious interior."
   },
   {
@@ -51,6 +56,7 @@
     "BuildYear": 2018,
     "Price": 21000,
     "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
     "Description": "Toyota Corolla with low mileage. Fuel-efficient and easy to maneuver."
   },
   {
@@ -60,6 +66,7 @@
     "BuildYear": 2016,
     "Price": 17000,
     "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
     "Description": "Honda Civic with moderate mileage. Smooth handling and reliable."
   },
   {
@@ -69,6 +76,7 @@
     "BuildYear": 2015,
     "Price": 15000,
     "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
     "Description": "Ford Focus with high mileage. Suitable for daily commuting. Some wear and tear but runs well."
   },
   {
@@ -78,6 +86,7 @@
     "BuildYear": 2018,
     "Price": 23000,
     "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
     "Description": "Chevrolet Impala with moderate mileage. Spacious interior and smooth ride."
   },
   {
@@ -87,6 +96,7 @@
     "BuildYear": 2017,
     "Price": 20000,
     "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
     "Description": "Nissan Sentra with low mileage. Economic and reliable compact sedan."
   },
   {
@@ -96,6 +106,7 @@
     "BuildYear": 2016,
     "Price": 24000,
     "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
     "Description": "Toyota RAV4 with moderate mileage. Reliable SUV with ample cargo space."
   },
   {
@@ -105,6 +116,7 @@
     "BuildYear": 2015,
     "Price": 16000,
     "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
     "Description": "Honda Fit with high mileage. Compact and efficient city car."
   },
   {
@@ -114,6 +126,7 @@
     "BuildYear": 2018,
     "Price": 25000,
     "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
     "Description": "Ford Escape with moderate mileage. SUV with good fuel efficiency and comfortable ride."
   },
   {
@@ -123,6 +136,7 @@
     "BuildYear": 2019,
     "Price": 21000,
     "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
     "Description": "Chevrolet Cruze with low mileage. Economical sedan with modern features."
   },
   {
@@ -132,6 +146,7 @@
     "BuildYear": 2017,
     "Price": 18000,
     "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
     "Description": "Nissan Versa with low mileage. Compact and reliable city car."
   },
   {
@@ -141,6 +156,7 @@
     "BuildYear": 2016,
     "Price": 27000,
     "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
     "Description": "Toyota Highlander with moderate mileage. Spacious and comfortable SUV for families."
   },
   {
@@ -150,6 +166,343 @@
     "BuildYear": 2015,
     "Price": 19000,
     "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
     "Description": "Honda Pilot with high mileage. Reliable and spacious family SUV."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Explorer",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 28000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+
+
+    "Description": "Ford Explorer with moderate mileage. Perfect for family outings and long trips."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Equinox",
+    "KilometersDriven": 48000,
+    "BuildYear": 2019,
+    "Price": 22000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description": "Chevrolet Equinox with low mileage. Spacious interior and modern features."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Rogue",
+    "KilometersDriven": 60000,
+    "BuildYear": 2017,
+    "Price": 20000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan Rogue with moderate mileage. Comfortable and versatile SUV."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Sienna",
+    "KilometersDriven": 70000,
+    "BuildYear": 2016,
+    "Price": 30000,
+    "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
+    "Description": "Toyota Sienna with high mileage. Spacious interior and reliable performance."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Odyssey",
+    "KilometersDriven": 55000,
+    "BuildYear": 2018,
+    "Price": 24000,
+    "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
+    "Description": "Honda Odyssey with moderate mileage. Comfortable and versatile minivan."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Edge",
+    "KilometersDriven": 45000,
+    "BuildYear": 2019,
+    "Price": 26000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+    "Description": "Ford Edge with low mileage. Stylish SUV with advanced features."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Tahoe",
+    "KilometersDriven": 65000,
+    "BuildYear": 2016,
+    "Price": 32000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description": "Chevrolet Tahoe with moderate mileage. Powerful and spacious SUV."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Pathfinder",
+    "KilometersDriven": 75000,
+    "BuildYear": 2015,
+    "Price": 22000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan Pathfinder with high mileage. Reliable and comfortable for long trips."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "4Runner",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 34000,
+    "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
+    "Description": "Toyota 4Runner with moderate mileage. Robust off-road capabilities."
+  },
+  {
+    "Make": "Honda",
+    "Model": "HR-V",
+    "KilometersDriven": 48000,
+    "BuildYear": 2019,
+    "Price": 28000,
+    "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
+    "Description": "Honda HR-V with low mileage. Compact SUV with versatile interior."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Expedition",
+    "KilometersDriven": 60000,
+    "BuildYear": 2017,
+    "Price": 36000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+    "Description": "Ford Expedition with moderate mileage. Spacious and powerful SUV."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Suburban",
+    "KilometersDriven": 70000,
+    "BuildYear": 2016,
+    "Price": 38000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description": "Chevrolet Suburban with high mileage. Luxurious and spacious SUV."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Armada",
+    "KilometersDriven": 55000,
+    "BuildYear": 2018,
+    "Price": 30000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan Armada with moderate mileage. Powerful and comfortable for long trips."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Tacoma",
+    "KilometersDriven": 45000,
+    "BuildYear": 2019,
+    "Price": 32000,
+    "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
+    "Description":
+
+ "Toyota Tacoma with low mileage. Robust and reliable pickup truck."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Ridgeline",
+    "KilometersDriven": 65000,
+    "BuildYear": 2016,
+    "Price": 34000,
+    "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
+    "Description": "Honda Ridgeline with moderate mileage. Versatile and comfortable pickup truck."
+  },
+  {
+    "Make": "Ford",
+    "Model": "F-150",
+    "KilometersDriven": 75000,
+    "BuildYear": 2015,
+    "Price": 30000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+    "Description": "Ford F-150 with high mileage. Reliable and durable pickup truck."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Silverado",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 35000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description": "Chevrolet Silverado with moderate mileage. Powerful and spacious pickup truck."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Titan",
+    "KilometersDriven": 48000,
+    "BuildYear": 2019,
+    "Price": 33000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan Titan with low mileage. Strong and capable pickup truck."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Tundra",
+    "KilometersDriven": 60000,
+    "BuildYear": 2017,
+    "Price": 37000,
+    "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
+    "Description": "Toyota Tundra with moderate mileage. Spacious and powerful pickup truck."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Civic Type R",
+    "KilometersDriven": 70000,
+    "BuildYear": 2016,
+    "Price": 38000,
+    "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
+    "Description": "Honda Civic Type R with high mileage. Sporty and agile performance."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Mustang",
+    "KilometersDriven": 55000,
+    "BuildYear": 2018,
+    "Price": 39000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+    "Description": "Ford Mustang with moderate mileage. Iconic sports car with powerful performance."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Camaro",
+    "KilometersDriven": 45000,
+    "BuildYear": 2019,
+    "Price": 40000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description": "Chevrolet Camaro with low mileage. Classic muscle car with modern features."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "GT-R",
+    "KilometersDriven": 65000,
+    "BuildYear": 2016,
+    "Price": 42000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan GT-R with moderate mileage. Legendary performance and cutting-edge technology."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Supra",
+    "KilometersDriven": 75000,
+    "BuildYear": 2015,
+    "Price": 45000,
+    "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
+    "Description": "Toyota Supra with high mileage. Iconic sports car with thrilling performance."
+  },
+  {
+    "Make": "Honda",
+    "Model": "CR-V",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 38000,
+    "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
+    "Description": "Honda CR-V with moderate mileage. Comfortable and versatile SUV for families."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Bronco",
+    "KilometersDriven": 48000,
+    "BuildYear": 2019,
+    "Price": 46000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+    "Description": "Ford Bronco with low mileage. Off-road capable SUV with retro styling."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Blazer",
+    "KilometersDriven": 60000,
+    "BuildYear": 2017,
+    "Price": 48000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description": "Chevrolet Blazer with moderate mileage. Stylish and spacious SUV."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Kicks",
+    "KilometersDriven": 70000,
+    "BuildYear": 2016,
+    "Price": 42000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan Kicks with high mileage. Compact SUV with modern features."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Land Cruiser",
+    "KilometersDriven": 55000,
+    "BuildYear": 2018,
+    "Price": 50000,
+    "StateOfRegistration": "New South Wales",
+    "Location": "Sydney",
+    "Description": "Toyota Land Cruiser with moderate mileage. Legendary off-road capabilities and luxury features."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Insight",
+    "KilometersDriven": 45000,
+    "BuildYear": 2019,
+    "Price": 39000,
+    "StateOfRegistration": "Victoria",
+    "Location": "Melbourne",
+    "Description": "Honda Insight with low mileage. Hybrid efficiency with sleek design."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Ranger",
+    "KilometersDriven": 65000,
+    "BuildYear": 2016,
+    "Price": 48000,
+    "StateOfRegistration": "Queensland",
+    "Location": "Brisbane",
+    "Description": "Ford Ranger with moderate mileage. Tough and capable pickup truck."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Colorado",
+    "KilometersDriven": 75000,
+    "BuildYear": 2015,
+    "Price": 52000,
+    "StateOfRegistration": "Western Australia",
+    "Location": "Perth",
+    "Description":
+
+ "Chevrolet Colorado with high mileage. Reliable and versatile pickup truck."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Frontier",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 53000,
+    "StateOfRegistration": "South Australia",
+    "Location": "Adelaide",
+    "Description": "Nissan Frontier with moderate mileage. Tough and durable pickup truck."
   }
 ]
