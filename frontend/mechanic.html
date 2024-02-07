@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Header content here -->
+    </header>
+
+    <main>
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Oil Change</li>
+                <li>Brake Repair</li>
+                <li>Engine Diagnostics</li>
+                <li>Tire Rotation</li>
+                <!-- Add more services as needed -->
+            </ul>
+        </section>
+
+        <section class="appointment">
+            <h2>Schedule an Appointment</h2>
+            <form action="submit_appointment.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="service">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select Service</option>
+                    <option value="Oil Change">Oil Change</option>
+                    <option value="Brake Repair">Brake Repair</option>
+                    <option value="Engine Diagnostics">Engine Diagnostics</option>
+                    <option value="Tire Rotation">Tire Rotation</option>
+                    <!-- Add more services as needed -->
+                </select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p>123 Mechanic Street</p>
+            <p>City, State, Zip</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@example.com</p>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Great service, quick turnaround time!"</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"Highly recommend this mechanic!"</p>
+                <p>- Jane Smith</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
