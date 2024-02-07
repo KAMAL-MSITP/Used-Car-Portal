@@ -6,9 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Used Car Portal</title>   
     <link rel="stylesheet" href="styles.css">  
+
+    <script>
+        async function fetchItems() {
+            try {
+                const response = await fetch('/usedcardetails');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log(data);
+                const itemsList = document.getElementById('items-list');
+                itemsList.innerHTML = '';
+
+                data.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.Make}: ${item.Model}`;
+                    itemsList.appendChild(li);
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        fetchItems();
+    </script>
+
 </head>
 <body>
     <header>
+
         <div><img src="\Images\logo.jpg" alt="Homepage Car Logo"><h1>Used Car Portal</h1></div>
         <div>
             <nav>
@@ -27,6 +54,7 @@
     </header>
 
     <main>
+       
         <div id="filterContainer">
           <form id="filterForm">
             <label for="make">Make:</label>
@@ -167,6 +195,10 @@
         <div id="carListContainer">
             <ul id="carList"></ul>
         </div>
+
+        <h1>Items</h1>
+        <ul id="items-list"></ul>
+        
     </main>
 
     <footer>
