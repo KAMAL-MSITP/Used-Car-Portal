@@ -1,0 +1,155 @@
+[
+  {
+    "Make": "Toyota",
+    "Model": "Camry",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 20000,
+    "StateOfRegistration": "New South Wales",
+    "Description": "Reliable Toyota Camry with low mileage. Great condition and perfect for city driving."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Accord",
+    "KilometersDriven": 60000,
+    "BuildYear": 2017,
+    "Price": 18000,
+    "StateOfRegistration": "Victoria",
+    "Description": "Honda Accord in excellent condition. Smooth ride and spacious interior."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Fusion",
+    "KilometersDriven": 70000,
+    "BuildYear": 2016,
+    "Price": 16000,
+    "StateOfRegistration": "Queensland",
+    "Description": "Ford Fusion with moderate mileage. Well-maintained and fuel-efficient."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Malibu",
+    "KilometersDriven": 55000,
+    "BuildYear": 2019,
+    "Price": 22000,
+    "StateOfRegistration": "Western Australia",
+    "Description": "Chevrolet Malibu in great shape. Sleek design and comfortable ride."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Altima",
+    "KilometersDriven": 45000,
+    "BuildYear": 2017,
+    "Price": 19000,
+    "StateOfRegistration": "South Australia",
+    "Description": "Nissan Altima with low mileage. Reliable performance and spacious interior."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Corolla",
+    "KilometersDriven": 40000,
+    "BuildYear": 2018,
+    "Price": 21000,
+    "StateOfRegistration": "New South Wales",
+    "Description": "Toyota Corolla with low mileage. Fuel-efficient and easy to maneuver."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Civic",
+    "KilometersDriven": 65000,
+    "BuildYear": 2016,
+    "Price": 17000,
+    "StateOfRegistration": "Victoria",
+    "Description": "Honda Civic with moderate mileage. Smooth handling and reliable."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Focus",
+    "KilometersDriven": 75000,
+    "BuildYear": 2015,
+    "Price": 15000,
+    "StateOfRegistration": "Queensland",
+    "Description": "Ford Focus with high mileage. Suitable for daily commuting. Some wear and tear but runs well."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Impala",
+    "KilometersDriven": 50000,
+    "BuildYear": 2018,
+    "Price": 23000,
+    "StateOfRegistration": "Western Australia",
+    "Description": "Chevrolet Impala with moderate mileage. Spacious interior and smooth ride."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Sentra",
+    "KilometersDriven": 48000,
+    "BuildYear": 2017,
+    "Price": 20000,
+    "StateOfRegistration": "South Australia",
+    "Description": "Nissan Sentra with low mileage. Economic and reliable compact sedan."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "RAV4",
+    "KilometersDriven": 60000,
+    "BuildYear": 2016,
+    "Price": 24000,
+    "StateOfRegistration": "New South Wales",
+    "Description": "Toyota RAV4 with moderate mileage. Reliable SUV with ample cargo space."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Fit",
+    "KilometersDriven": 70000,
+    "BuildYear": 2015,
+    "Price": 16000,
+    "StateOfRegistration": "Victoria",
+    "Description": "Honda Fit with high mileage. Compact and efficient city car."
+  },
+  {
+    "Make": "Ford",
+    "Model": "Escape",
+    "KilometersDriven": 55000,
+    "BuildYear": 2018,
+    "Price": 25000,
+    "StateOfRegistration": "Queensland",
+    "Description": "Ford Escape with moderate mileage. SUV with good fuel efficiency and comfortable ride."
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Cruze",
+    "KilometersDriven": 45000,
+    "BuildYear": 2019,
+    "Price": 21000,
+    "StateOfRegistration": "Western Australia",
+    "Description": "Chevrolet Cruze with low mileage. Economical sedan with modern features."
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Versa",
+    "KilometersDriven": 40000,
+    "BuildYear": 2017,
+    "Price": 18000,
+    "StateOfRegistration": "South Australia",
+    "Description": "Nissan Versa with low mileage. Compact and reliable city car."
+  },
+  {
+    "Make": "Toyota",
+    "Model": "Highlander",
+    "KilometersDriven": 65000,
+    "BuildYear": 2016,
+    "Price": 27000,
+    "StateOfRegistration": "New South Wales",
+    "Description": "Toyota Highlander with moderate mileage. Spacious and comfortable SUV for families."
+  },
+  {
+    "Make": "Honda",
+    "Model": "Pilot",
+    "KilometersDriven": 75000,
+    "BuildYear": 2015,
+    "Price": 19000,
+    "StateOfRegistration": "Victoria",
+    "Description": "Honda Pilot with high mileage. Reliable and spacious family SUV."
+  }
+]
