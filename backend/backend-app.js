@@ -42,13 +42,13 @@ const uri = 'mongodb://localhost:27017';
 const dbName = 'carplatform';
 const client = new MongoClient(uri);
 const userSchema = new mongoose.Schema({
-  Make: String,
-  Model: String,
-  KilometersDriven: String,
-  BuildYear: String,
-  Price: String,
-  StateOfRegistration: String,
-  Description: String
+  Make: String, // String type
+  Model: String, // String type
+  KilometersDriven: Number, // Change to Number type if storing numeric values
+  BuildYear: Number, // Change to Number type if storing numeric values
+  Price: Number, // Change to Number type if storing numeric values
+  StateOfRegistration: String, // String type
+  Description: String // String type
 });
 const UsedCarDetail = mongoose.model('usedcardetails', userSchema);
 

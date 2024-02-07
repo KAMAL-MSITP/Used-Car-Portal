@@ -9,29 +9,52 @@
 
     <script>
         async function fetchItems() {
-            try {
-                const response = await fetch('/usedcardetails');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                console.log(data);
-                const itemsList = document.getElementById('items-list');
-                itemsList.innerHTML = '';
+        try {
+            const response = await fetch('/usedcardetails');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            console.log(data);
+            const carList = document.getElementById('carList');
+            carList.innerHTML = ''; // Clear existing content
 
+            if (data && data.length > 0) {
                 data.forEach(item => {
                     const li = document.createElement('li');
-                    li.textContent = `${item.Make}: ${item.Model}`;
-                    itemsList.appendChild(li);
+                    li.className = 'car-details'; // Add class for styling
+                    li.innerHTML = `
+                        <h2>${item.Make}</h2>
+                        <p>Model: ${item.Model}</p>                        
+                        <p>Year: ${item.Year}</p>
+                        <p>Price: $${item.Price}</p>
+                        <p>BuildYear: ${item.BuildYear}</p>
+                        <p>KilometersDriven: ${item.KilometersDriven}</p>
+                        <p>StateOfRegistration: ${item.StateOfRegistration}</p>
+                        <p>Description: ${item.Description}</p>
+                    `;
+                    carList.appendChild(li);
                 });
-            } catch (error) {
-                console.error('Error fetching data:', error);
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'No items found'; // Display a message if no items are available
+                carList.appendChild(li);
             }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            const carList = document.getElementById('carList');
+            carList.innerHTML = ''; // Clear existing content
+            const li = document.createElement('li');
+            li.textContent = 'Error fetching data'; // Display an error message if data fetching fails
+            carList.appendChild(li);
         }
+    }
+
+
+
 
         fetchItems();
     </script>
-
 </head>
 <body>
     <header>
@@ -48,7 +71,6 @@
                     <li><a href="mechanic.html">Mechanic</a></li>
                     <li><a href="howitworks.html">How it Works</a></li>
                     <li><a href="rentacar.html">Rent a Car</a></li>
-
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </nav>
