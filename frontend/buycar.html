@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Buy a Car</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="buy-car">
+            <h2>Fill Out the Form to Buy a Car</h2>
+            <form action="submit_purchase_request.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <section class="select-make">
+                    <h2>Select Your Desired Car Make:</h2>
+                    <form>
+                        <label for="make">Make:</label>
+                        <select id="make" name="make" required>
+                            <option value="" selected disabled>Select Make</option>
+                            <option value="Acura">Acura</option>
+                            <option value="Alfa Romeo">Alfa Romeo</option>
+                            <option value="Aston Martin">Aston Martin</option>
+                            <!-- Add more options for other car makes -->
+                        </select>
+                    </form>
+                </section>
+
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" name="budget" min="0"><br><br>
+
+                <label for="options">Additional Options:</label><br>
+                <input type="checkbox" id="warranty" name="warranty">
+                <label for="warranty">Extended Warranty</label><br>
+
+                <input type="checkbox" id="maintenance-plan" name="maintenance-plan">
+                <label for="maintenance-plan">Maintenance Plan</label><br>
+
+                <input type="checkbox" id="insurance" name="insurance">
+                <label for="insurance">Insurance</label><br><br>
+
+                <label for="message">Message (Optional):</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+                <label for="preferred-contact">Preferred Contact Method:</label>
+                <select id="preferred-contact" name="preferred-contact">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="text">Text Message</option>
+                </select><br><br>
+
+                <label for="preferred-time">Preferred Contact Time:</label>
+                <input type="time" id="preferred-time" name="preferred-time"><br><br>
+
+                <label for="preferred-language">Preferred Language:</label>
+                <select id="preferred-language" name="preferred-language">
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <!-- Add more language options as needed -->
+                </select><br><br>
+
+                <label for="interest-level">Interest Level:</label>
+                <input type="range" id="interest-level" name="interest-level" min="0" max="10" value="5"><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Car Dealership. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
