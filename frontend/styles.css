@@ -67,3 +67,31 @@ footer {
 .question h3 {
     color: red; /* Change to desired color */
 }
+/* CSS for main content */
+main {
+  padding: 20px;
+}
+
+/* CSS for body types grid */
+.body-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CSS for individual body type */
+.body-type {
+    text-align: center;
+}
+
+.body-type img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.body-type h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}

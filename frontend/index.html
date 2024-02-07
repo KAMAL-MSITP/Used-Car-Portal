@@ -7,16 +7,6 @@
     <title>Used Car Portal</title>   
     <link rel="stylesheet" href="styles.css">  
 
-    <style>
-        /* Add CSS styling for car details boxes */
-        .car-details {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            width: 300px;
-        }
-    </style>
-
     <script>
         async function fetchItems() {
             try {
@@ -26,20 +16,13 @@
                 }
                 const data = await response.json();
                 console.log(data);
-                const carList = document.getElementById('carList');
-                carList.innerHTML = '';
+                const itemsList = document.getElementById('items-list');
+                itemsList.innerHTML = '';
 
                 data.forEach(item => {
                     const li = document.createElement('li');
-                    li.className = 'car-details'; // Add class for styling
-                    li.innerHTML = `
-                        <h2>${item.Make}</h2>
-                        <p>Model: ${item.Model}</p>
-                        <p>Year: ${item.Year}</p>
-                        <p>Price: $${item.Price}</p>
-                        <!-- Add more details as needed -->
-                    `;
-                    carList.appendChild(li);
+                    li.textContent = `${item.Make}: ${item.Model}`;
+                    itemsList.appendChild(li);
                 });
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -61,6 +44,8 @@
                     <li><a href="buycar.html">Buy Car</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="Seller.html">Sell a Car</a></li>
+                    <li><a href="mylist.html">My List</a></li>
+                    <li><a href="mechanic.html">Mechanic</a></li>
                     <li><a href="howitworks.html">How it Works</a></li>
                     <li><a href="rentacar.html">Rent a Car</a></li>
 
@@ -71,7 +56,6 @@
     </header>
 
     <main>
-
         <section class="signup-login">
             
             <button id="toggle-form-btn">Sign Up / Login</button>
@@ -221,19 +205,57 @@
             <button type="submit">Apply Filters</button>
         </form>
     
-        <h1>Available list of Used Cars</h1>
-        <ul id="items-list"></ul>
-
+ 
         <div id="carListContainer">
             <ul id="carList"></ul>
-        </div>
+        </div> 
+            <h1>Browse Cars by Body Type</h1>
+            <div class="body-types">
+                <div class="body-type">
+                    <img src="convertible.jpg" alt="Convertible">
+                    <h2>Convertible</h2>
+                </div>
+                <div class="body-type">
+                    <img src="wagon.jpg" alt="Wagon">
+                    <h2>Wagon</h2>
+                </div>
+                <div class="body-type">
+                    <img src="commercial.jpg" alt="Commercial">
+                    <h2>Commercial</h2>
+                </div>
+                <div class="body-type">
+                    <img src="hatchback.jpg" alt="Hatchback">
+                    <h2>Hatchback</h2>
+                </div>
+                <div class="body-type">
+                    <img src="coupe.jpg" alt="Coupe">
+                    <h2>Coupe</h2>
+                </div>
+                <div class="body-type">
+                    <img src="ute.jpg" alt="Ute">
+                    <h2>Ute</h2>
+                </div>
+                <div class="body-type">
+                    <img src="people_mover.jpg" alt="People Mover">
+                    <h2>People Mover</h2>
+                </div>
+                <div class="body-type">
+                    <img src="sedan.jpg" alt="Sedan">
+                    <h2>Sedan</h2>
+                </div>
+                <div class="body-type">
+                    <img src="suv.jpg" alt="SUV">
+                    <h2>SUV</h2>
+                </div>
 
-        
-        
+        <h1>Items</h1>
+        <ul id="items-list"></ul>
+       
     </main>
 
     <footer>
         <script>
+            
             document.addEventListener("DOMContentLoaded", function() {
                 const toggleFormBtn = document.getElementById("toggle-form-btn");
                 const signupLoginForm = document.getElementById("signup-login-form");
