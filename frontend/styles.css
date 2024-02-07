@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to bottom right, #FFC0CB, #87CEEB); /* Gradient background with pink and sky blue */
 }
 
 /* CSS for header */
@@ -46,6 +47,9 @@ footer {
   color: #fff;
   padding: 10px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* CSS for FAQ page */
@@ -63,4 +67,3 @@ footer {
 .question h3 {
     color: red; /* Change to desired color */
 }
-
