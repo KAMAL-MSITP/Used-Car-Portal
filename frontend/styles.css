@@ -48,3 +48,19 @@ footer {
   text-align: center;
 }
 
+/* CSS for FAQ page */
+.faq-title {
+    text-align: center;
+    font-size: 2em;
+    color: black; /* Change to desired color */
+}
+
+.faq-intro {
+    text-align: center;
+    color: black; /* Change to desired color */
+}
+
+.question h3 {
+    color: red; /* Change to desired color */
+}
+
