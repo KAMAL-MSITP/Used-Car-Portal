@@ -7,6 +7,16 @@
     <title>Used Car Portal</title>   
     <link rel="stylesheet" href="styles.css">  
 
+    <style>
+        /* Add CSS styling for car details boxes */
+        .car-details {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+    </style>
+
     <script>
         async function fetchItems() {
             try {
@@ -16,13 +26,20 @@
                 }
                 const data = await response.json();
                 console.log(data);
-                const itemsList = document.getElementById('items-list');
-                itemsList.innerHTML = '';
+                const carList = document.getElementById('carList');
+                carList.innerHTML = '';
 
                 data.forEach(item => {
                     const li = document.createElement('li');
-                    li.textContent = `${item.Make}: ${item.Model}`;
-                    itemsList.appendChild(li);
+                    li.className = 'car-details'; // Add class for styling
+                    li.innerHTML = `
+                        <h2>${item.Make}</h2>
+                        <p>Model: ${item.Model}</p>
+                        <p>Year: ${item.Year}</p>
+                        <p>Price: $${item.Price}</p>
+                        <!-- Add more details as needed -->
+                    `;
+                    carList.appendChild(li);
                 });
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -204,13 +221,14 @@
             <button type="submit">Apply Filters</button>
         </form>
     
- 
+        <h1>Available list of Used Cars</h1>
+        <ul id="items-list"></ul>
+
         <div id="carListContainer">
             <ul id="carList"></ul>
         </div>
 
-        <h1>Items</h1>
-        <ul id="items-list"></ul>
+        
         
     </main>
 
