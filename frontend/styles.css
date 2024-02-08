@@ -1,11 +1,12 @@
-/* Your CSS Styles for Aesthetic Filter Section */
-
+/* CSS for body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to bottom right, #FFC0CB, #87CEEB); /* Gradient background with pink and sky blue */
 }
 
+/* CSS for header */
 header {
   background-color: #333;
   color: #fff;
@@ -13,10 +14,10 @@ header {
   text-align: center;
 }
 
+/* CSS for navigation menu */
 nav ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 nav ul li {
@@ -24,35 +25,88 @@ nav ul li {
   margin-right: 20px;
 }
 
-nav a {
-  text-decoration: none;
+/* CSS for navigation links */
+nav ul li a {
   color: #fff;
-  font-weight: bold;
-  font-size: 18px;
+  text-decoration: none;
 }
 
+/* CSS for navigation links on hover */
+nav ul li a:hover {
+  color: #ccc;
+}
+
+/* CSS for main content */
 main {
-  display: flex;
-}
-
-#filterContainer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  width: 200px; /* Adjust the width as needed */
-  overflow-y: auto; /* Add a scrollbar when the content is too long */
-}
-
-#carListContainer {
-  flex-grow: 1;
   padding: 20px;
 }
 
+/* CSS for footer */
 footer {
   background-color: #333;
   color: #fff;
+  padding: 4px;
   text-align: center;
-  padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* CSS for FAQ page */
+.faq-title {
+    text-align: center;
+    font-size: 2em;
+    color: black; /* Change to desired color */
+}
+
+.faq-intro {
+    text-align: center;
+    color: black; /* Change to desired color */
+}
+
+.question h3 {
+    color: red; /* Change to desired color */
+}
+/* CSS for main content */
+main {
+  padding: 20px;
+}
+
+/* CSS for body types grid */
+.body-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CSS for individual body type */
+.body-type {
+    text-align: center;
+}
+
+.body-type img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.body-type h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.car-details {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: calc(25% - 20px); /* 25% width with margins considered */
+  float: left; /* Float items to make them parallel */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Add CSS styling for the section with scrollbar */
+#carListContainer {
+  max-height: 400px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrollbar */
 }

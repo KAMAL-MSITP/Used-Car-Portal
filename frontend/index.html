@@ -4,25 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Used Car Portal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Used Car Portal</title>   
+    <link rel="stylesheet" href="styles.css">  
+
+    <script>
+        async function fetchItems() {
+        try {
+            const response = await fetch('/usedcardetails');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            console.log(data);
+            const carList = document.getElementById('carList');
+            carList.innerHTML = ''; // Clear existing content
+
+            if (data && data.length > 0) {
+                data.forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'car-details'; // Add class for styling
+                    li.innerHTML = `
+                        <h2>${item.Make}</h2>
+                        <p>Model: ${item.Model}</p>                        
+                        <p>Year: ${item.Year}</p>
+                        <p>Price: $${item.Price}</p>
+                        <p>BuildYear: ${item.BuildYear}</p>
+                        <p>KilometersDriven: ${item.KilometersDriven}</p>
+                        <p>StateOfRegistration: ${item.StateOfRegistration}</p>
+                        <p>Description: ${item.Description}</p>
+                    `;
+                    carList.appendChild(li);
+                });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'No items found'; // Display a message if no items are available
+                carList.appendChild(li);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            const carList = document.getElementById('carList');
+            carList.innerHTML = ''; // Clear existing content
+            const li = document.createElement('li');
+            li.textContent = 'Error fetching data'; // Display an error message if data fetching fails
+            carList.appendChild(li);
+        }
+    }
+
+
+
+
+        fetchItems();
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="#review">Review</a></li>
-                <li><a href="#list">List a Car</a></li>
-                <li><a href="#manage">Manage Listings</a></li>
-            </ul>
-        </nav>
-        <h1>Used Car Portal</h1>
+
+        <div><img src="\Images\logo.jpg" alt="Homepage Car Logo"><h1>Used Car Portal</h1></div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="buycar.html">Buy Car</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Seller.html">Sell a Car</a></li>
+                    <li><a href="mylist.html">My List</a></li>
+                    <li><a href="mechanic.html">Mechanic</a></li>
+                    <li><a href="howitworks.html">How it Works</a></li>
+                    <li><a href="rentacar.html">Rent a Car</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <div id="filterContainer">
+        <section class="signup-login">
+            
+            <button id="toggle-form-btn">Sign Up / Login</button>
+            <form id="signup-login-form" class="hidden">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign Up / Login</button>
+            </form>
+        </section>
 
+
+        <div id="filterContainer">
           <form id="filterForm">
             <label for="make">Make:</label>
             <select id="make" name="make">
@@ -75,10 +144,8 @@
               <option value="Proton">Proton</option>
               <option value="BYD">BYD</option>
               <option value="Chery">Chery</option>
-              <option value="LDV">LDV</option>
-              
+              <option value="LDV">LDV</option>              
           </select>
-    
           
 
           <label for="location">Location:</label>
@@ -163,10 +230,64 @@
  
         <div id="carListContainer">
             <ul id="carList"></ul>
-        </div>
+        </div> 
+            <h1>Browse Cars by Body Type</h1>
+            <div class="body-types">
+                <div class="body-type">
+                    <img src="convertible.jpg" alt="Convertible">
+                    <h2>Convertible</h2>
+                </div>
+                <div class="body-type">
+                    <img src="wagon.jpg" alt="Wagon">
+                    <h2>Wagon</h2>
+                </div>
+                <div class="body-type">
+                    <img src="commercial.jpg" alt="Commercial">
+                    <h2>Commercial</h2>
+                </div>
+                <div class="body-type">
+                    <img src="hatchback.jpg" alt="Hatchback">
+                    <h2>Hatchback</h2>
+                </div>
+                <div class="body-type">
+                    <img src="coupe.jpg" alt="Coupe">
+                    <h2>Coupe</h2>
+                </div>
+                <div class="body-type">
+                    <img src="ute.jpg" alt="Ute">
+                    <h2>Ute</h2>
+                </div>
+                <div class="body-type">
+                    <img src="people_mover.jpg" alt="People Mover">
+                    <h2>People Mover</h2>
+                </div>
+                <div class="body-type">
+                    <img src="sedan.jpg" alt="Sedan">
+                    <h2>Sedan</h2>
+                </div>
+                <div class="body-type">
+                    <img src="suv.jpg" alt="SUV">
+                    <h2>SUV</h2>
+                </div>
+
+        <h1>Items</h1>
+        <ul id="items-list"></ul>
+       
     </main>
 
     <footer>
+        <script>
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                const toggleFormBtn = document.getElementById("toggle-form-btn");
+                const signupLoginForm = document.getElementById("signup-login-form");
+        
+                toggleFormBtn.addEventListener("click", function() {
+                    signupLoginForm.classList.toggle("hidden");
+                });
+            });
+        </script>
+        
         <p>&copy; 2024 Used Car Portal</p>
     </footer>
 
