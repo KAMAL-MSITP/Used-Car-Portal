@@ -17,8 +17,18 @@
             const data = await response.json();
             console.log(data);
             const carList = document.getElementById('carList');
-            carList.innerHTML = ''; // Clear existing content
-
+         
+            const makeDropdown = document.getElementById('Make');
+            const locationDropdown = document.getElementById('StateOfRegistration');
+            const modelDropdown = document.getElementById('Model');       
+            
+            const priceDropdown = document.getElementById('Price');     
+            const buildyearDropdown = document.getElementById('BuildYear');       
+            const kilometersDrivenDropdown = document.getElementById('KilometersDriven');       
+            const descriptionDropdown = document.getElementById('description');
+                       
+             // Clear existing content
+            carList.innerHTML = ''; 
             if (data && data.length > 0) {
                 data.forEach(item => {
                     const li = document.createElement('li');
@@ -26,7 +36,7 @@
                     li.innerHTML = `
                         <h2>${item.Make}</h2>
                         <p>Model: ${item.Model}</p>                        
-                        <p>Year: ${item.Year}</p>
+                      
                         <p>Price: $${item.Price}</p>
                         <p>BuildYear: ${item.BuildYear}</p>
                         <p>KilometersDriven: ${item.KilometersDriven}</p>
@@ -34,6 +44,39 @@
                         <p>Description: ${item.Description}</p>
                     `;
                     carList.appendChild(li);
+                    const optionMake = document.createElement('option');
+                    optionMake.value = `${item.Make}`;
+                    optionMake.textContent = `${item.Make}`;
+                    makeDropdown.appendChild(optionMake);
+
+                    const optionLocation = document.createElement('option');
+                    optionLocation.value = `${item.StateOfRegistration}`;
+                    optionLocation.textContent = `${item.StateOfRegistration}`;
+                    locationDropdown.appendChild(optionLocation);
+
+                    const optionModel = document.createElement('option');
+                    optionModel.value = `${item.Model}`;
+                    optionModel.textContent = `${item.Model}`;
+                    modelDropdown.appendChild(optionModel);
+
+                   
+                     
+                    const optionPrice = document.createElement('option');
+                    optionPrice.value = `${item.Price}`;
+                    optionPrice.textContent = `${item.Price}`;
+                    priceDropdown.appendChild(optionPrice);
+              
+                    const optionBuildyear = document.createElement('option');
+                    optionBuildyear.value = `${item.BuildYear}`;
+                    optionBuildyear.textContent = `${item.BuildYear}`;
+                    buildyearDropdown.appendChild(optionBuildyear);
+
+                    const optionKilometersDriven = document.createElement('option');
+                    optionKilometersDriven.value = `${item.KilometersDriven}`;
+                    optionKilometersDriven.textContent = `${item.KilometersDriven}`;
+                    kilometersDrivenDropdown.appendChild(optionKilometersDriven);
+             
+                  
                 });
             } else {
                 const li = document.createElement('li');
@@ -49,9 +92,80 @@
             carList.appendChild(li);
         }
     }
+    function getSelectedValues() {
+        const selectedValues = {};
+    const selects = document.querySelectorAll('select');
+    console.log(selects);
+    selects.forEach(select => {
+        console.log(select.id)
+        console.log(select.value)
+        selectedValues[select.id] = select.value;
+       
+    });
+    return selectedValues;
+}
+    function applyFilter() {
+        
+        const selectedValues = getSelectedValues();
+    console.log("Selected values:", selectedValues);
+    const convertedValues = {
+    ...selectedValues,
+    Price: parseInt(selectedValues.Price),
+    BuildYear:parseInt(selectedValues.BuildYear),
+    KilometersDriven: parseInt(selectedValues.KilometersDriven),
+    
+};
+    // Send the selected values to the backend using AJAX
+    fetch('/filterData', {
+        method: 'Post',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(convertedValues),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Handle the response from the backend
+        console.log('Response from backend:', data);
+        // Do something with the response data
+        const carList = document.getElementById('carList');
+        carList.innerHTML = ''; 
+                data.forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'car-details'; // Add class for styling
+                    li.innerHTML = `
+                        <h2>${item.Make}</h2>
+                        <p>Model: ${item.Model}</p>                        
+                      
+                        <p>Price: $${item.Price}</p>
+                        <p>BuildYear: ${item.BuildYear}</p>
+                        <p>KilometersDriven: ${item.KilometersDriven}</p>
+                        <p>StateOfRegistration: ${item.StateOfRegistration}</p>
+                        <p>Description: ${item.Description}</p>
+                    `;
+                    carList.appendChild(li);
+                });
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
 
 
-
+}
+function clearFilter(){
+    fetchItems();
+}
+document.addEventListener("DOMContentLoaded", function() {
+    // This function will be called once the DOM is fully loaded
+    // Now you can safely add the event listener
+    document.getElementById('applyButton').addEventListener('click', applyFilter);
+    document.getElementById('ClearButton').addEventListener('click', clearFilter);
+});
 
         fetchItems();
     </script>
@@ -59,8 +173,12 @@
 <body>
     <header>
 
-        <div><img src="\Images\logo.jpg" alt="Homepage Car Logo"><h1>Used Car Portal</h1></div>
         <div>
+            <img src="carlogo.jpg" alt="Homepage Car Logo" width="74px" height="46px">
+            
+            <h1>Used Car Portal</h1></div>
+        <div>
+            
             <nav>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
@@ -72,206 +190,51 @@
                     <li><a href="howitworks.html">How it Works</a></li>
                     <li><a href="rentacar.html">Rent a Car</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="login.html">LOGIN</a></li>                                              
+                        
+                    </section>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="signup-login">
-            
-            <button id="toggle-form-btn">Sign Up / Login</button>
-            <form id="signup-login-form" class="hidden">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Sign Up / Login</button>
-            </form>
-        </section>
+        
 
 
         <div id="filterContainer">
           <form id="filterForm">
             <label for="make">Make:</label>
-            <select id="make" name="make">
-              <option value="">Select Make</option>
-              <option value="Toyota">Toyota</option>
-              <option value="Ford">Ford</option>
-              <option value="Holden">Holden</option>
-              <option value="Mazda">Mazda</option>
-              <option value="Hyundai">Hyundai</option>
-              <option value="Volkswagen">Volkswagen</option>
-              <option value="Nissan">Nissan</option>
-              <option value="Honda">Honda</option>
-              <option value="Subaru">Subaru</option>
-              <option value="Mitsubishi">Mitsubishi</option>
-              <option value="Kia">Kia</option>
-              <option value="BMW">BMW</option>
-              <option value="Mercedes-Benz">Mercedes-Benz</option>
-              <option value="Audi">Audi</option>
-              <option value="Lexus">Lexus</option>
-              <option value="Jaguar">Jaguar</option>
-              <option value="Land Rover">Land Rover</option>
-              <option value="Porsche">Porsche</option>
-              <option value="Volvo">Volvo</option>
-              <option value="Tesla">Tesla</option>
-              <option value="Mini">Mini</option>
-              <option value="Fiat">Fiat</option>
-              <option value="Alfa Romeo">Alfa Romeo</option>
-              <option value="Jeep">Jeep</option>
-              <option value="Chrysler">Chrysler</option>
-              <option value="Dodge">Dodge</option>
-              <option value="Ram">Ram</option>
-              <option value="GMC">GMC</option>
-              <option value="Chevrolet">Chevrolet</option>
-              <option value="Cadillac">Cadillac</option>
-              <option value="Buick">Buick</option>
-              <option value="Suzuki">Suzuki</option>
-              <option value="Isuzu">Isuzu</option>
-              <option value="Peugeot">Peugeot</option>
-              <option value="Citroën">Citroën</option>
-              <option value="Renault">Renault</option>
-              <option value="Skoda">Skoda</option>
-              <option value="MG">MG</option>
-              <option value="Infiniti">Infiniti</option>
-              <option value="Genesis">Genesis</option>
-              <option value="Lynk & Co">Lynk & Co</option>
-              <option value="Mahindra">Mahindra</option>
-              <option value="SsangYong">SsangYong</option>
-              <option value="Haval">Haval</option>
-              <option value="Great Wall">Great Wall</option>
-              <option value="Proton">Proton</option>
-              <option value="BYD">BYD</option>
-              <option value="Chery">Chery</option>
-              <option value="LDV">LDV</option>              
-          </select>
-          
-
-          <label for="location">Location:</label>
-          <select id="location" name="location">
-              <option value="">Select Location</option>
-              <optgroup label="Australian Capital Territory">
-                  <option value="canberra">Canberra</option>
-              </optgroup>
-              <optgroup label="New South Wales">
-                  <option value="sydney">Sydney</option>
-                  <option value="newcastle">Newcastle</option>
-                  <option value="central-coast">Central Coast</option>
-                  <option value="wollongong">Wollongong</option>
-              </optgroup>
-              <optgroup label="Northern Territory">
-                  <option value="darwin">Darwin</option>
-                  <option value="alice-springs">Alice Springs</option>
-              </optgroup>
-              <optgroup label="Queensland">
-                  <option value="brisbane">Brisbane</option>
-                  <option value="gold-coast">Gold Coast</option>
-                  <option value="cairns">Cairns</option>
-              </optgroup>
-              <optgroup label="South Australia">
-                  <option value="adelaide">Adelaide</option>
-                  <option value="mount-gambier">Mount Gambier</option>
-              </optgroup>
-              <optgroup label="Tasmania">
-                  <option value="hobart">Hobart</option>
-                  <option value="launceston">Launceston</option>
-              </optgroup>
-              <optgroup label="Victoria">
-                  <option value="melbourne">Melbourne</option>
-                  <option value="geelong">Geelong</option>
-                  <option value="ballarat">Ballarat</option>
-              </optgroup>
-              <optgroup label="Western Australia">
-                  <option value="perth">Perth</option>
-                  <option value="fremantle">Fremantle</option>
-              </optgroup>
-              <!-- Add other states and cities as needed -->
-          </select>
-
-        
-            <label for="priceFrom">Price From:</label>
-            <input type="number" id="priceFrom" name="priceFrom" placeholder="Enter minimum price">
-
-            <label for="priceTo">Price To:</label>
-            <input type="number" id="priceTo" name="priceTo" placeholder="Enter maximum price">
-    
-            <label for="yearFrom">Year From:</label>
-            <select id="yearFrom" name="yearFrom">
-                <option value="">Select Year</option>
-                <!-- Populate this dropdown with actual years or a relevant range -->
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <!-- Add more years as needed -->
-            </select>
-
-            <label for="yearTo">Year To:</label>
-            <select id="yearTo" name="yearTo">
-                <option value="">Select Year</option>
-                <!-- Populate this dropdown with actual years or a relevant range -->
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <!-- Add more years as needed -->
-            </select>
-    
-            <label for="kilometersFrom">Kilometers Range (From):</label>
-            <input type="number" id="kilometersFrom" name="kilometersFrom">
-    
-            <label for="kilometersTo">Kilometers Range (To):</label>
-            <input type="number" id="kilometersTo" name="kilometersTo">
+            <select id="Make" name="Make"></select>
+            <label for="location">Location:</label>
+            <select id="StateOfRegistration" name="StateOfRegistration"></select>
+            <label for="model">Model:</label>
+            <select id="Model" name="Model"></select>                     
+            <label for="price">Price:</label>
+            <select id="Price" name="Price"></select>     
+            <label for="buildYear">BuildYear:</label>
+            <select id="BuildYear" name="BuildYear"></select> 
+            <label for="kilometersDriven">KilometersDriven:</label>
+            <select id="KilometersDriven" name="KilometersDriven"></select> 
+            
+           
+            
     
             <!-- Add more filter fields as needed -->
     
-            <button type="submit">Apply Filters</button>
+            <button type="submit" id="applyButton">Apply Filters</button>
+            <button type="submit" id="ClearButton">Clear Filters</button>
         </form>
     
- 
+        <h1>Available list of cars</h1>
+        <ul id="items-list"></ul>
+        
         <div id="carListContainer">
             <ul id="carList"></ul>
         </div> 
-            <h1>Browse Cars by Body Type</h1>
-            <div class="body-types">
-                <div class="body-type">
-                    <img src="convertible.jpg" alt="Convertible">
-                    <h2>Convertible</h2>
-                </div>
-                <div class="body-type">
-                    <img src="wagon.jpg" alt="Wagon">
-                    <h2>Wagon</h2>
-                </div>
-                <div class="body-type">
-                    <img src="commercial.jpg" alt="Commercial">
-                    <h2>Commercial</h2>
-                </div>
-                <div class="body-type">
-                    <img src="hatchback.jpg" alt="Hatchback">
-                    <h2>Hatchback</h2>
-                </div>
-                <div class="body-type">
-                    <img src="coupe.jpg" alt="Coupe">
-                    <h2>Coupe</h2>
-                </div>
-                <div class="body-type">
-                    <img src="ute.jpg" alt="Ute">
-                    <h2>Ute</h2>
-                </div>
-                <div class="body-type">
-                    <img src="people_mover.jpg" alt="People Mover">
-                    <h2>People Mover</h2>
-                </div>
-                <div class="body-type">
-                    <img src="sedan.jpg" alt="Sedan">
-                    <h2>Sedan</h2>
-                </div>
-                <div class="body-type">
-                    <img src="suv.jpg" alt="SUV">
-                    <h2>SUV</h2>
-                </div>
+            
 
-        <h1>Items</h1>
-        <ul id="items-list"></ul>
+        
        
     </main>
 
@@ -294,4 +257,3 @@
     <script src="frontend-app.js"></script>
 </body>
 </html>
-

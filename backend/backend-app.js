@@ -76,3 +76,60 @@ app.get('/usedcardetails', async (req, res) => {
     console.log('Closed the connection');
   }
 });
+app.post('/filterData',async (req, res) => {
+  const selectedValues = req.body;
+  console.log('Selected values from frontend to backend', selectedValues);
+  const query = {};
+  console.log("make"+selectedValues.Make);
+  
+  const convertedValues = {
+    ...selectedValues,
+    Price: parseInt(selectedValues.Price),
+    BuildYear:parseInt(selectedValues.BuildYear),
+    KilometersDriven: parseInt(selectedValues.KilometersDriven),
+    
+};
+ 
+  if (selectedValues.Make) {
+      query.Make = convertedValues.Make;
+  }
+   if (selectedValues.Model) {
+      query.Model = convertedValues.Model;
+   }
+   if (selectedValues.KilometersDriven) {
+     query.KilometersDriven = convertedValues.KilometersDriven;
+   
+   }
+   if (selectedValues.BuildYear) {
+       query.BuildYear = convertedValues.BuildYear;
+   }
+   if (selectedValues.Price) {
+     query.Price = convertedValues.Price;
+   }
+  if (selectedValues.StateOfRegistration) {
+   query.StateOfRegistration = convertedValues.StateOfRegistration;
+}
+
+
+console.log('Constructed query:', query);
+  // Connect to MongoDB and execute the query
+  try {
+    await client.connect();
+    console.log('Connected to the server');
+    const db = client.db(dbName);
+    const collection = db.collection('usedcardeatils');
+   
+    //const filteredData = await collection.find(query).toArray();
+     // const filteredData = await collection.find(query).toArray();
+    //  console.log('Filtered data:',)
+     // console.log(filteredData);
+     
+      const usedCarDetails = await UsedCarDetail.find(query);
+      // Send back the filtered data to the frontend
+      res.json(usedCarDetails);
+      console.log(res);
+    } catch (error) {
+      console.error('Error occurred while fetching data from MongoDB', error);
+      res.status(500).json({ error: 'Internal server error' });
+  }
+});

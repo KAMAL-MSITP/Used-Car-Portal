@@ -34,19 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         // Gather filter values from the form
-        const filters = {
-            make: filterForm.make.value,
-            location: filterForm.location.value,
-            priceLow: filterForm.priceFrom.value,
-            priceHigh: filterForm.priceTo.value,
-            yearFrom: filterForm.yearFrom.value,
-            yearTo: filterForm.yearTo.value,
-            kilometersFrom: filterForm.kilometersFrom.value,
-            kilometersTo: filterForm.kilometersTo.value,
-            // Add more filters as needed
-        };
+        // const filters = {
+        //     make: filterForm.make.value,
+        //     location: filterForm.location.value,
+        //     priceLow: filterForm.priceFrom.value,
+        //     priceHigh: filterForm.priceTo.value,
+        //     yearFrom: filterForm.yearFrom.value,
+        //     yearTo: filterForm.yearTo.value,
+        //     kilometersFrom: filterForm.kilometersFrom.value,
+        //     kilometersTo: filterForm.kilometersTo.value,
+        //     // Add more filters as needed
+        // };
 
-        // Fetch and display cars based on filters
-        fetchAndDisplayCars(filters);
+        // // Fetch and display cars based on filters
+        // fetchAndDisplayCars(filters);
     });
 });
