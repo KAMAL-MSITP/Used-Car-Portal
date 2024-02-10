@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,9 @@
     <title>Mechanic Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="mechanic-page">
     <header>
-        <!-- Header content here -->
+        <h1>Mechanic Services</h1>
     </header>
 
     <main>
@@ -26,31 +27,37 @@
         <section class="appointment">
             <h2>Schedule an Appointment</h2>
             <form action="submit_appointment.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="service">Service:</label>
-                <select id="service" name="service" required>
-                    <option value="">Select Service</option>
-                    <option value="Oil Change">Oil Change</option>
-                    <option value="Brake Repair">Brake Repair</option>
-                    <option value="Engine Diagnostics">Engine Diagnostics</option>
-                    <option value="Tire Rotation">Tire Rotation</option>
-                    <!-- Add more services as needed -->
-                </select>
-
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required>
-
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Oil Change">Oil Change</option>
+                        <option value="Brake Repair">Brake Repair</option>
+                        <option value="Engine Diagnostics">Engine Diagnostics</option>
+                        <option value="Tire Rotation">Tire Rotation</option>
+                        <!-- Add more services as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -79,15 +86,18 @@
         <section class="contact-form">
             <h2>Contact Us</h2>
             <form action="submit_contact.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
                 <button type="submit">Submit</button>
             </form>
         </section>

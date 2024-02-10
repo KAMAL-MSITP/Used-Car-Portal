@@ -110,3 +110,93 @@ main {
   max-height: 400px; /* Set maximum height */
   overflow-y: auto; /* Enable vertical scrollbar */
 }
+
+/*Zia css code*/
+
+/* CSS styles for the mechanic page */
+.mechanic-page header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.mechanic-page main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mechanic-page .services, .mechanic-page .appointment, .mechanic-page .contact, .mechanic-page .testimonials, .mechanic-page .contact-form {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mechanic-page h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.mechanic-page ul {
+  list-style-type: none;
+}
+
+.mechanic-page li {
+  margin-bottom: 10px;
+}
+
+.mechanic-page label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.mechanic-page .form-group {
+  margin-bottom: 15px;
+}
+
+.mechanic-page input[type="text"],
+.mechanic-page input[type="email"],
+.mechanic-page input[type="tel"],
+.mechanic-page select,
+.mechanic-page textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.mechanic-page button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.mechanic-page button:hover {
+  background-color: #45a049;
+}
+
+.mechanic-page .testimonial {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.mechanic-page footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/*Zia css code ends here*/
+
+
+
