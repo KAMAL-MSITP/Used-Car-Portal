@@ -43,13 +43,15 @@ main {
 
 /* CSS for footer */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 4px;
-  text-align: center;
-  position: fixed;
+  position: relative; /* Or adjust as necessary */
   bottom: 0;
   width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 999; /* Adjust the z-index if necessary */
+  /* Add any other necessary styling */
 }
 
 /* CSS for FAQ page */
