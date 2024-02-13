@@ -37,17 +37,17 @@ We appreciate you listing your vehicle for sale on our Used Car Portal. We are e
         </section>
         <section class="list-car">
         
-            <form action="submit_car_listing.php" method="post">
+            <form>
                
                 <section class="select-make">
                     <h2>Select Car Make</h2>
-                    
+                    <form>
                         <label for="make">Make:</label>
                         <select id="MakeDropdown" name="Make">                           
                             <!-- Add more options for other car brands -->
                         </select>
-                    
-                </section><br>
+                    </form>
+                </section>
                 
                 <label for="model">Model:</label>
                 <input type="text" id="modelSell" name="Model" required><br><br>
@@ -81,7 +81,7 @@ We appreciate you listing your vehicle for sale on our Used Car Portal. We are e
     <footer>
         <p>&copy; 2024 Used Car Portal. All rights reserved.</p>
     </footer>
-    
+
     <script src="frontend-app.js"></script>
    
 </body>
