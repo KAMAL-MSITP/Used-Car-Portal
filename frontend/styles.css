@@ -102,7 +102,7 @@ main {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
-  width: calc(47% - 20px); /* 25% width with margins considered */
+  width: calc(20% - 20px); /* 25% width with margins considered */
   float: left; /* Float items to make them parallel */
   box-sizing: border-box; /* Include padding and border in the width */
 }
