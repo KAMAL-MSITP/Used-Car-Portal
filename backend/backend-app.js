@@ -33,6 +33,35 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
+app.post('/insertData',async (req, res) => {
+  const data = req.body;
+    console.log("inside insertData");
+    console.log(data);
+    try {
+      await client.connect();
+      console.log('Connected to the server');
+      const db = client.db(dbName);
+      const collection = db.collection('usedcardetails');
+
+        // Insert data into the collection
+        const result = await collection.insertOne(data);
+
+        // Close the MongoDB connection
+        client.close();
+
+        // Send a success response
+        res.status(200).send('Data inserted successfully into MongoDB');
+    } catch (err) {
+        // Log and send an error response
+        console.error('Error inserting data into MongoDB:', err);
+        res.status(500).send('Error inserting data')
+    }
+  });
+
+app.get('/seller.html', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend', 'seller.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on: http://localhost:${PORT}`);
 });
